@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-solana-purple/20;
+  }
+  
+  body {
+    @apply bg-solana-darker text-gray-100;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-solana-purple via-solana-green to-solana-purple bg-clip-text text-transparent;
+  }
+  
+  .gradient-border {
+    @apply relative before:absolute before:inset-0 before:rounded-xl before:p-[2px] before:bg-gradient-to-r before:from-solana-purple before:to-solana-green before:-z-10;
+  }
+  
+  .glow-effect {
+    @apply shadow-[0_0_30px_rgba(153,69,255,0.3)];
+  }
+  
+  .glow-effect-green {
+    @apply shadow-[0_0_30px_rgba(20,241,149,0.3)];
+  }
+}
